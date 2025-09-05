@@ -1,26 +1,79 @@
 body {
-    
+    background-color: #213448;
+    color: #ECEFCA;
 }
 nav {
     display: flex;
-    flex-flow: row;
+    flex-flow: row nowrap;
     align-items: center;
     justify-content: space-between;
+    font-size: 1.2rem;
+    position: sticky;
+    top: 0;
+    background-color: #21344893;
+    max-height: 85px;
 }
+.mobileNav {
+    background-color: #4E6688;
+    display: none;
+    flex-direction: column;
+    min-height: 10rem;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    position: relative;
+    top: 50px;
 
+}
+a {
+    color: #71C0BB;
+    padding-right: 2rem;
+}
+a:hover {
+    color: #ECEFCA;
+}
+.brandingClass {
+    display: flex;
+    align-items: center;
+    flex-flow: row wrap;
+    font-size: 1.7rem;
+}
 .hero {
     display: flex;
-    flex-flow: column-reverse;
+    justify-content: center;
+    flex-flow: column-reverse nowrap;
     align-items: flex-end;
-    min-height: 500px;
+    min-height: 100vh;
+    background-image: linear-gradient(to right, rgba(0,0,0,0), rgba(0,0,0,0), rgba(0,0,0,0.75), black), url('hans-moerman-rEOVfkfleok-unsplash.jpg');
+    background-position: left;
+    background-repeat: no-repeat;
+    background-size: cover;
 }
-
 .cta {
     align-items: center;
     display: flex;
     justify-content: center;
     flex-direction: column;
     margin: 50px;
+}
+h1 {
+    font-size: 3rem;
+    color: #ECEFCA;
+    margin: 3rem;
+    text-shadow: 2px 2px 5px #213448;
+    
+}
+button {
+    background-color: #213448;
+    min-width: 160px;
+    min-height: 75px;
+    color: #ECEFCA;
+    font-size: 1.5rem;
+    border-radius: 5px;
+
+}
+button:hover,
+button:focus {
+    background-image: linear-gradient(to right, #213448, #71C0BB);
 }
 .ctaButton {
     align-self: center;
@@ -34,11 +87,92 @@ nav {
 }
 .offeringsCard {
     display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    width: 100%;
+    flex-direction: column;
+    justify-content: space-evenly;
+    width: 90%;
+    margin: 0 2rem;
 }
 .productText {
     display: flex;
     flex-direction: column;
+}
+.aboutText {
+    background-color: #4E6688;
+    border-color: #71C0BB;
+    border-radius: 7px;
+    border-width: 5px;
+    padding: 3rem;
+    max-width: 75%;
+    margin: 60px 30px;
+    justify-self: center;
+}
+.cardImage {
+    max-width: 100%;
+    max-height: 40%;
+    margin: 1rem;
+}
+.contact {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 50vh;
+    justify-items: center;
+}
+form {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    gap: 3rem;
+}
+input[type="text"] {
+    padding: 1rem;
+    margin: 1rem 0 0 0;
+}
+input[list] {
+    padding: 1rem;
+    margin: 1rem;
+}
+textarea {
+    padding: 1rem;
+    margin: 1rem 0 0 0;
+}
+input[type="submit"] {
+    padding: 1rem;
+    margin: 1rem;
+    max-width: 9rem;
+    font-size: 1rem;
+    font-weight: bold;
+    background-color:#121c27;
+    color:#ECEFCA;
+}
+input[type="submit"]:hover,
+input[type="submit"]:focus {
+    background-color:#4E6688;
+}
+#fname-required,
+#lname-required,
+#email-required,
+#message-required {
+    color: red;
+    margin: .2rem 0 1rem 0;
+
+}
+footer {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    max-height: 7rem;
+    background-color:#121c27;
+    padding: 1rem;
+}
+@media screen and (max-width: 800px) {
+    .navLinks {
+        display: none;
+    }
+    .mobileNav {
+        display: flex;
+    }
+    .products {
+        grid-template-columns: 100%;
+    }
 }
